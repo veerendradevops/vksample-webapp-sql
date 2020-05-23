@@ -6,9 +6,9 @@
 	String lastName = request.getParameter("lastName"); 
 	String email = request.getParameter("email"); 
 	Class.forName ( "com.mysql.jdbc.Driver"); 
-	Connection con = DriverManager.getConnection("jdbc:mysql://database-1.cekspoetbpsn.us-east-1.rds.amazonaws.com:3306/database-1", "admin", "password");
+	Connection con = DriverManager.getConnection("jdbc:mysql://ec2-100-24-12-64.compute-1.amazonaws.com:3306/demo", "demouser", "demouser");
 	Statement st = con.createStatement(); 
-	int i = st.executeUpdate("insert into USER(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','" + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
+	int i = st.executeUpdate("insert into users(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','" + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
 	if (i > 0) { 
 				response.sendRedirect("welcome.jsp"); 
 			} 

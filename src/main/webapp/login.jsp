@@ -9,7 +9,7 @@
  Connection con = DriverManager.getConnection("jdbc:mysql://ec2-100-24-12-64.compute-1.amazonaws.com:3306/demo", "demouser", "demouser");
  Statement st = con.createStatement(); 
  ResultSet rs; 
- rs = st.executeQuery("select * from USER where username='" + userName + "' and password='" + password + "'");
+ rs = st.executeQuery("select * from users where username='" + userName + "' and password='" + password + "'");
 	if (rs.next()) 
 		{ 
 			session.setAttribute("userid", userName); 
