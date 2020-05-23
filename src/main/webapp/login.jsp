@@ -6,7 +6,7 @@
  String password = request.getParameter("password"); 
  
  Class.forName ("com.mysql.jdbc.Driver"); 
- Connection con = DriverManager.getConnection("jdbc:mysql://ec2-100-24-12-64.compute-1.amazonaws.com:3306/demo", "demouser", "demouser");
+ Connection con = DriverManager.getConnection("jdbc:mysql://database-3.cekspoetbpsn.us-east-1.rds.amazonaws.com:3306/demo", "demouser", "demouser");
  Statement st = con.createStatement(); 
  ResultSet rs; 
  rs = st.executeQuery("select * from users where username='" + userName + "' and password='" + password + "'");
