@@ -19,7 +19,7 @@ CREATE SCHEMA demo DEFAULT CHARACTER SET 'utf8mb4' DEFAULT COLLATE 'utf8mb4_bin'
 
 User creation and granting permissions to the user 
 CREATE USER 'admin'@'<rds-endpoint>' IDENTIFIED BY 'password';
-GRANT ALL ON demo.* TO 'admin'@'localhost';
+GRANT ALL ON demo.* TO 'admin'@'<rds-endpoint>';
 
 Creating table:
 CREATE TABLE IF NOT EXISTS demo.users (username VARCHAR(100) PRIMARY KEY,first_name VARCHAR(100),last_name VARCHAR(100),email VARCHAR(100),password VARCHAR(100),regdate DATE);
