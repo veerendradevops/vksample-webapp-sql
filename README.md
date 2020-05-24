@@ -14,10 +14,11 @@ this is worked with sql tooo
 => Modify rds endpoint details in /src/main/webapp/userRegistration.jsp and login.jsp
 =>
 SQL Queries:
+
 DB creation:
 CREATE SCHEMA demo DEFAULT CHARACTER SET 'utf8mb4' DEFAULT COLLATE 'utf8mb4_bin' ;
 
-User creation and granting permissions to the user 
+User creation and granting permissions to the user :
 CREATE USER 'admin'@'<rds-endpoint>' IDENTIFIED BY 'password';
 GRANT ALL ON demo.* TO 'admin'@'<rds-endpoint>';
 
@@ -27,8 +28,20 @@ CREATE TABLE IF NOT EXISTS demo.users (username VARCHAR(100) PRIMARY KEY,first_n
 Insert the data for testing:
 insert into demo.users(first_name, last_name, email, username, password, regdate) values ('veerendra','kumar','vk@gmail.com','vktholeti','password', CURDATE());
 
-####CONNECTING SQL DATABASE from SQL in ubuntu/linux ###########33
-mysql -h <rds endpoint> -u admin -P 3306 -p <database'name>  (Note: if you donthave any database give null value for -p )
+####CONNECTING SQL DATABASE from SQL in ubuntu/linux ###########
+mysql -h <rds endpoint> -u admin -P 3306 -p <database'name>  (Note: if you don’t have any database give null value for -p )
+
+
+
+VPC CREATION:
+=> Create VPC(10.10.0.0//16), subnets (public()10.10.0.0/24),privateNAT(10.10.1.0/24),db(10.10.2.0/24)
+=> Launch an instance in privateNAT, install a tomcat 
+=> Create RDS in db subnet
+
+JENKINS Creation:
+=> Create Jenkins job with git webhooks, and Continous deployments
+=> For continuous deployment, please visit ContinousDelivery Using Jenkins
+
 
 
 
