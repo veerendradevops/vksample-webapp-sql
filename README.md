@@ -37,7 +37,7 @@ VPC CREATION:
 => Create VPC(10.10.0.0//16), subnets (public()10.10.0.0/24),privateNAT(10.10.1.0/24),db(10.10.2.0/24)
 => Launch an instance in privateNAT, install a tomcat 
 => Create RDS in db subnet
-
+ffsd
 JENKINS Creation:
 => Create Jenkins job with git webhooks, and Continous deployments
 => For continuous deployment, please visit ContinousDelivery Using Jenkins
