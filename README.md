@@ -12,7 +12,7 @@ this is worked with sql tooo
 => Create a database and table by using below queries
 => Make sure to open required ports in rds security group
 => Modify rds endpoint details in /src/main/webapp/userRegistration.jsp and login.jsp
-
+=>
 SQL Queries:
 DB creation:
 CREATE SCHEMA demo DEFAULT CHARACTER SET 'utf8mb4' DEFAULT COLLATE 'utf8mb4_bin' ;
