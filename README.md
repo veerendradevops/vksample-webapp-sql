@@ -28,7 +28,7 @@ Insert the data for testing:
 insert into demo.users(first_name, last_name, email, username, password, regdate) values ('veerendra','kumar','vk@gmail.com','vktholeti','password', CURDATE());
 
 ####CONNECTING SQL DATABASE from SQL in ubuntu/linux ###########33
-mysql -h <rds endpoint> -u admin -P 3306 -p <database'name>
+mysql -h <rds endpoint> -u admin -P 3306 -p <database'name>  (Note: if you donthave any database give null value for -p )
 
 
 
